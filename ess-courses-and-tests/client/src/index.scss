@@ -1,0 +1,108 @@
+$primaryText: #333333;
+$lightGrey: #a0a0a0;
+$transitionDurration: 0.5s;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $primaryText;
+}
+
+.mainWrapper {
+  margin: 2rem;
+}
+
+.courseWindow {
+  width: 100%;
+}
+
+.course {
+  max-width: 800px;
+  min-width: 200px;
+  box-shadow: 0 0 4px #999;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+
+  input {
+    width: 75%;
+    line-height: 1.5em;
+  }
+}
+
+.addCourseButton {
+  position: relative;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #2196f3;
+  box-shadow: 0 0 4px #999;
+  border: none;
+  outline: none;
+
+  transition: all $transitionDurration;
+  &:hover {
+    background: #6eb9f7;
+  }
+  &:active {
+    top: 1px;
+  }
+}
+
+.evenTest {
+  background: #99ccff;
+}
+
+.addTestButton {
+  position: relative;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #2196f3;
+  box-shadow: 0 0 4px #999;
+  border: none;
+  outline: none;
+
+  transition: all $transitionDurration;
+  &:hover {
+    background: #6eb9f7;
+  }
+  &:active {
+    top: 1px;
+  }
+}
+
+@media (min-width: 900px) {
+  .mainWrapper {
+    display: flex;
+  }
+  .courseWindow {
+    min-width: 500px;
+    max-width: 100%;
+    min-height: 100vh;
+    border: 1px solid $lightGrey;
+  }
+  .addCourse {
+    max-width: 50%;
+    min-width: 400px;
+    padding-left: 1em;
+  }
+  .course {
+    max-width: 1000px;
+  }
+}
